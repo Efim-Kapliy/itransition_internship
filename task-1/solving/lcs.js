@@ -1,0 +1,2 @@
+const{argv}=require('node:process');
+if(argv.length<3){console.log('')}else{const d=argv.slice(2);let f=d[0],m=0,i,j,s;for(i=0;i<f.length;i++){for(j=0;i+j<f.length&&d.every((k)=>{return k.includes(f.slice(i,i+j+1))});j++);if(j>m){m=j;s=i}}console.log(f.slice(s,s+m))}
