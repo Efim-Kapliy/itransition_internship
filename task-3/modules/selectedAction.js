@@ -9,17 +9,9 @@ class SelectedAction {
   }
 
   getActiveAction() {
-    if (!this.action) {
-      return null;
-    }
+    if (!this.action) return null;
     return this.action[1];
   }
-
-  // getInputProcessing() {
-  //   this.calculatingResult;
-
-  //   this.actionOutput;
-  // }
 }
 
 export default SelectedAction;

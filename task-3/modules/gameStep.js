@@ -25,7 +25,6 @@ const gameStep = (inputValues, rl, hmac) => {
       }
 
       console.log(`Your move: ${selectedAction}`);
-
       resolve(response);
       return rl.close();
     });

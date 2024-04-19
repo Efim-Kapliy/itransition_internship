@@ -12,5 +12,3 @@ class CalculationFormula {
 }
 
 export default CalculationFormula;
-
-console.log(new CalculationFormula(2, 1, 7).getCalculationMoves());

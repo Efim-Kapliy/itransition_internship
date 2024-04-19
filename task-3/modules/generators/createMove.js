@@ -4,8 +4,7 @@ class CreateMove {
   }
 
   getIndexRandomMove() {
-    this.rndMove = Math.floor(Math.random() * (this.maxMovies - 1) + 1);
-    return this.rndMove;
+    return Math.floor(Math.random() * (this.maxMovies - 1) + 1);
   }
 }
 
