@@ -1,4 +1,5 @@
 import ActionsData from './actionsData.js';
+import CreateTableMatrix from './generators/createTableMatrix.js';
 
 class SelectedAction {
   constructor(commandIndex, movesEntered) {

@@ -42,7 +42,7 @@ const main = async () => {
       return [userMoveIndex, compMoveIndex];
     })
     .then((array) => {
-      const result = new CalculationFormula(array[0], array[1], inputValues.length).getCalculationMoves();
+      const result = new CalculationFormula(array[0], array[1], inputValues.length).getCalculationMove();
       switch (result) {
         case 0:
           console.log('Draw');
