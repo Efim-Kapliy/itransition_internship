@@ -1,4 +1,5 @@
 import ActionsData from './actionsData.js';
+import CreateTableMatrix from './generators/createTableMatrix.js';
 
 class SelectedAction {
   constructor(commandIndex, movesEntered) {
@@ -9,17 +10,9 @@ class SelectedAction {
   }
 
   getActiveAction() {
-    if (!this.action) {
-      return null;
-    }
+    if (!this.action) return null;
     return this.action[1];
   }
-
-  // getInputProcessing() {
-  //   this.calculatingResult;
-
-  //   this.actionOutput;
-  // }
 }
 
 export default SelectedAction;

@@ -1,5 +1,6 @@
 import SelectedAction from './selectedAction.js';
 import Menu from './menu.js';
+import TableMoves from './generators/tableMoves.js';
 
 const gameStep = (inputValues, rl, hmac) => {
   return new Promise((resolve, reject) => {
@@ -21,11 +22,11 @@ const gameStep = (inputValues, rl, hmac) => {
       }
 
       if (answer === '?') {
+        new TableMoves(inputValues).getTableMoves();
         return rl.close();
       }
 
       console.log(`Your move: ${selectedAction}`);
-
       resolve(response);
       return rl.close();
     });
