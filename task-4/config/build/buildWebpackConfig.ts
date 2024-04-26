@@ -9,6 +9,7 @@ import { BuildOptions } from './types/config';
 
 export function buildWebpackConfig(options: BuildOptions): Configuration {
   const { mode, paths, isDev } = options;
+
   return {
     mode,
     entry: paths.entry,
@@ -18,7 +19,7 @@ export function buildWebpackConfig(options: BuildOptions): Configuration {
       clean: true,
     },
     module: {
-      rules: buildLoaders(),
+      rules: buildLoaders(options),
     },
     resolve: buildResolvers(),
     plugins: buildPlugins(options),
