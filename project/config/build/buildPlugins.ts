@@ -9,5 +9,8 @@ export function buildPlugins({paths, isDev}: BuildOptions): WebpackPluginInstanc
     new HtmlWebpackPlugin({
       template: paths.html,
     }),
-  ].concat(isDev ? [] : [new MiniCssExtractPlugin()]);
+  ].concat(isDev ? [] : [new MiniCssExtractPlugin({
+    filename: 'css/[name].[contenthash].css',
+    chunkFilename: 'css/[id].[contenthash].css',
+  })]);
 }

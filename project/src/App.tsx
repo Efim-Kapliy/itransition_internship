@@ -1,4 +1,5 @@
-import SomeComponent from './components/test';
+import SomeComponent from './components/Component';
+import './index.scss';
 
 
 function App() {

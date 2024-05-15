@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './test.module.scss';
+import cls from './component.module.scss';
 
 function SomeComponent() {
   const [count, setCount] = useState(0);
@@ -10,7 +10,7 @@ function SomeComponent() {
 
   return (
     <>
-      <div className='test'>{count}</div>
+      <div className={cls.test}>{count}</div>
       <button onClick={onIncrease}>increase</button>
     </>
   )
