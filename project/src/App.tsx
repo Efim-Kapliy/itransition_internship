@@ -1,9 +1,14 @@
-import SomeComponent from './components/Component';
+import { Outlet } from 'react-router-dom';
+import NavbarComponent from './components/NavbarComponent';
 import './index.scss';
 
-
 function App() {
-  return <SomeComponent />
+  return (
+    <>
+      <NavbarComponent />
+      <Outlet />
+    </>
+  );
 }
 
 export default App;
